@@ -1,24 +1,7 @@
-import Product from "./Product";
 import Profile from "./Profile/Profile";
+import FriendList from "./FriendList/FriendList";
 import userData from "../userData.json";
-
-// export default function App() {
-//   const stats = {
-//     likes: 1000,
-//     views: 200,
-//     followers: 120,
-//   };
-//   return (
-//     <div>
-//       <Profile
-//         stats={stats}
-//         tag="tag"
-//         name="John"
-//         location="San Francisco"
-//       ></Profile>
-//     </div>
-//   );
-// }
+import friends from "../friends.json";
 
 const App = () => {
   return (
@@ -30,6 +13,8 @@ const App = () => {
         image={userData.avatar}
         stats={userData.stats}
       />
+
+      <FriendList friends={friends} />
     </>
   );
 };
